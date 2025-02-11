@@ -6,15 +6,16 @@ import { ROOT } from '../navigation/Routes'
 const styles = {
     appBar: {
         position: 'static',
+        alignItems: 'center',
     },
-    title: {
-        textAlign: 'center',
+    linkTitle: {
         fontWeight: 'bold',
         marginTop: '10px',
         marginBottom: '10px',
         textDecoration: 'none',
         color: 'black',
         fontSize: '24px',
+        width: "auto"
     }
 }
 
@@ -22,8 +23,8 @@ export const Header = () => {
     return (
         <Box>
             <AppBar color='white' sx={styles.appBar}>
-                <Link href={ROOT} sx={styles.title}>
-                   {APP_NAME} 
+                <Link href={ROOT} sx={styles.linkTitle}>
+                    {APP_NAME}
                 </Link>
             </AppBar>
         </Box>
