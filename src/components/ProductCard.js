@@ -1,5 +1,6 @@
 import { Box, Card, CardMedia, Typography } from '@mui/material'
 import React from 'react'
+import { MENS_CLOTHING } from '../config/Constants';
 
 const styles = {
     card: {
@@ -30,7 +31,6 @@ const styles = {
         justifyContent: "center"
     },
     descBox: {
-        backgroundColor: "#2DD4BF",
         color: "black",
         textAlign: "center",
         p: 2,
@@ -49,16 +49,16 @@ const styles = {
     }
 }
 
-export const ProductCard = ({ title, imageURL, price, description }) => {
+export const ProductCard = ({ title, imageURL, price, description, category }) => {
     return (
         <Card sx={styles.card}>
             <Box sx={styles.titleBox}>
                 <Typography variant="h6" sx={styles.title}>
                     {title}
-                </Typography>
+                </Typography> 
             </Box>
             <CardMedia component="img" image={imageURL} alt={title} sx={styles.cardMedia} />
-            <Box sx={styles.descBox}>
+            <Box sx={{...styles.descBox, backgroundColor: category === MENS_CLOTHING?.toLowerCase() ? "#2DD4BF" : "#FF5E84"}}>
                 <Typography variant="h5" sx={styles.price}>
                     Rs. {price}
                 </Typography>

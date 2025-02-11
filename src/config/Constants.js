@@ -2,6 +2,7 @@ export const APP_NAME = "Modern Walk";
 export const FLASH_SALE = "Flash Sale";
 export const MENS_CLOTHING = "Men's Clothing";
 export const WOMENS_CLOTHING = "Women's Clothing";
+export const CATEGORIES = "Categories";
 
 // api endpoints
 export const ROOT_END_POINT = "https://fakestoreapi.com";
