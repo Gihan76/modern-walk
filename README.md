@@ -2,7 +2,7 @@
 
 Prototype User Interfaces for a fashion retailed web app
 
-## SnapShots 
+## Snapshots
 
 #### Landing Page
 ![Image](https://github.com/user-attachments/assets/f9f87def-d6c0-4c60-a150-f3945e41a1fb)
@@ -13,20 +13,18 @@ Prototype User Interfaces for a fashion retailed web app
 #### Women's Clothing Page
 ![Image](https://github.com/user-attachments/assets/c4329359-f1d3-4c5c-83eb-85775d5146c2)
 
-## Installation and Setup Instructions
-
-#### Example:  
+## Installation and Setup Instructions  
 
 Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-Installation:
+#### Installation:
 
 `npm install` or `npm install --legacy-peer-deps`
 
-To Start Server:
+#### To Start Server:
 
 `npm start`  
 
-To Visit App:
+#### To Visit App:
 
 `http://localhost:3000`  
