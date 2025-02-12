@@ -7,6 +7,8 @@ const styles = {
     appBar: {
         position: 'static',
         alignItems: 'center',
+        boxShadow: "none", 
+        borderBottom: "4px #D9D9D9 solid"
     },
     linkTitle: {
         fontWeight: 'bold',
