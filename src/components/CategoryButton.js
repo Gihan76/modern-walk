@@ -11,7 +11,7 @@ const styles = {
         fontSize: "30px",
         fontWeight: "bold",
         cursor: "pointer",
-        width: "600px",
+        width: "620px",
         textTransform: "none",
     }
 };

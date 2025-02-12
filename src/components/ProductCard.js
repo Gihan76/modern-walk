@@ -1,5 +1,5 @@
-import { Box, Card, CardMedia, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Card, CardMedia, Typography } from '@mui/material';
+import React from 'react';
 import { MENS_CLOTHING } from '../config/Constants';
 
 const styles = {
@@ -8,7 +8,7 @@ const styles = {
         height: 460,
         display: "flex",
         flexDirection: "column",
-        borderRadius: 3,
+        borderRadius: "12px",
         boxShadow: 3
     },
     cardMedia: {
@@ -25,7 +25,6 @@ const styles = {
         p: 2,
         textAlign: "center",
         minHeight: 60,
-        maxHeight: 60,
         display: "flex",
         alignItems: "center",
         justifyContent: "center"
@@ -36,7 +35,8 @@ const styles = {
         p: 2,
         flexGrow: 1,
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        borderRadius: "12px 12px"
     },
     price: {
         color: "#0E42FD",
@@ -47,7 +47,7 @@ const styles = {
         flexGrow: 1,
         color: "#0E0E0E"
     }
-}
+};
 
 export const ProductCard = ({ title, imageURL, price, description, category }) => {
     return (
@@ -55,10 +55,10 @@ export const ProductCard = ({ title, imageURL, price, description, category }) =
             <Box sx={styles.titleBox}>
                 <Typography variant="h6" sx={styles.title}>
                     {title}
-                </Typography> 
+                </Typography>
             </Box>
             <CardMedia component="img" image={imageURL} alt={title} sx={styles.cardMedia} />
-            <Box sx={{...styles.descBox, backgroundColor: category === MENS_CLOTHING?.toLowerCase() ? "#2DD4BF" : "#FF5E84"}}>
+            <Box sx={{ ...styles.descBox, backgroundColor: category === MENS_CLOTHING?.toLowerCase() ? "#2BD9AF" : "#FF5E84" }}>
                 <Typography variant="h5" sx={styles.price}>
                     Rs. {price}
                 </Typography>
@@ -67,5 +67,5 @@ export const ProductCard = ({ title, imageURL, price, description, category }) =
                 </Typography>
             </Box>
         </Card>
-    )
+    );
 };

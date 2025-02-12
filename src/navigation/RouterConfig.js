@@ -7,10 +7,12 @@ import { ProductList } from '../pages/ProductList'
 export const RouterConfig = () => {
     return (
         <Routes>
+            
             {/* page routes */}
             <Route path={ROOT} element={<LandingPage />} />
             <Route path={MENS_CLOTHING_ROOT} element={<ProductList />} />
             <Route path={WOMENS_CLOTHING_ROOT} element={<ProductList />} />
+
         </Routes>
     )
 }

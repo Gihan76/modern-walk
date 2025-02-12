@@ -14,7 +14,7 @@ const styles = {
         marginBottom: '10px',
         textDecoration: 'none',
         color: 'black',
-        fontSize: '24px',
+        fontSize: '30px',
         width: "auto"
     }
 }

@@ -1,5 +1,12 @@
 import axios from "axios";
 
+/**
+ * @description fetch product data from an endpoint
+ * @param {string} endPoint 
+ * @param {string} params 
+ * @param {array} categories 
+ * @returns {array}
+ */
 export const fetchProducts = async (endPoint = "", params = "", categories = []) => {
     try {
         const products = await axios.get(params ? `${endPoint}${params}` : endPoint);

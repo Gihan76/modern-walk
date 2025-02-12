@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { CATEGORIES, FLASH_SALE, MENS_CLOTHING, PRODUCTS_END_POINT, WOMENS_CLOTHING } from '../config/Constants';
 import { fetchProducts } from '../services/ProductServices';
-import { Grid2, Typography } from '@mui/material';
+import { Container, Grid2, Typography } from '@mui/material';
 import { ProductCard } from '../components/ProductCard';
 import { MENS_CLOTHING_ROOT, WOMENS_CLOTHING_ROOT } from '../navigation/Routes';
 import { CategoryButton } from '../components/CategoryButton';
@@ -54,11 +54,11 @@ export const LandingPage = () => {
     }, []);
 
     /**
-     * 
+     * @description pick latest items from each category to display in the flash sale
      * @param {array} products 
      * @param {array} categories 
      * @param {number} count 
-     * @returns mixed array of men's and women's clothing
+     * @returns array
      */
     const getItemsForFlashSale = (products= [], categories= [], count= 0) => {
         let flashSaleProducts = [];
@@ -74,13 +74,13 @@ export const LandingPage = () => {
     }, [products]);
 
     return (
-        <>
+        <Container maxWidth="xl">
             <Typography variant='h6' sx={styles.flashSale}>
                 {FLASH_SALE}
             </Typography>
             <Grid2 container spacing={3} sx={styles.grid}>
                 {flashSaleItems?.map((p, i) => (
-                    <Grid2 key={i} xs={12} sm={6} md={3}>
+                    <Grid2 key={i} xs={12} sm={6} md={4} lg={3}>
                         <ProductCard
                             title={p.title}
                             imageURL={p.image}
@@ -98,7 +98,7 @@ export const LandingPage = () => {
             <Grid2 container spacing={3} sx={styles.grid}>
                 {categoryTiles.map((c, i) => (
                     <Grid2 key={i} xs={12} sm={6} md={6}>
-                        <CategoryButton 
+                        <CategoryButton
                             label={c.name}
                             color={c.color}
                             route={c.route}
@@ -106,6 +106,6 @@ export const LandingPage = () => {
                     </Grid2>
                 ))}
             </Grid2>
-        </>
+        </Container>
     )
 }

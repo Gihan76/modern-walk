@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { CATEGORY_END_POINT, MENS_CLOTHING, WOMENS_CLOTHING } from '../config/Constants';
-import { Grid2, Typography } from '@mui/material';
+import { Container, Grid2, Typography } from '@mui/material';
 import { ProductCard } from '../components/ProductCard';
 import { fetchProducts } from '../services/ProductServices';
 import { MENS_CLOTHING_ROOT, WOMENS_CLOTHING_ROOT } from '../navigation/Routes';
@@ -14,7 +14,7 @@ const styles = {
         marginLeft: '100px'
     },
     grid: {
-        margin: "0 0 20px 0",
+        margin: "0 0 20px",
         justifyContent: "center"
     }
 };
@@ -23,7 +23,7 @@ export const ProductList = () => {
     const { pathname } = useLocation();
     const [products, setProducts] = useState([]);
 
-    // fetch products data
+    // fetch products data for each category
     useEffect(() => {
         (async () => {
             const response = await fetchProducts(pathname === MENS_CLOTHING_ROOT ? CATEGORY_END_POINT(MENS_CLOTHING?.toLowerCase()) : pathname === WOMENS_CLOTHING_ROOT ? CATEGORY_END_POINT(WOMENS_CLOTHING?.toLowerCase()) : '', '?sort=desc');
@@ -42,9 +42,9 @@ export const ProductList = () => {
     }, []);
 
     return (
-        <>
+        <Container maxWidth="xl">
             <Typography variant='h6' sx={styles.category}>
-                {MENS_CLOTHING}
+                {pathname === MENS_CLOTHING_ROOT ? MENS_CLOTHING : WOMENS_CLOTHING}
             </Typography>
             <Grid2 container spacing={3} sx={styles.grid}>
                 {products?.map((p, i) => (
@@ -59,6 +59,6 @@ export const ProductList = () => {
                     </Grid2>
                 ))}
             </Grid2>
-        </>
+        </Container>
     )
 }
