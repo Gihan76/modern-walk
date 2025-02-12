@@ -13,6 +13,7 @@ const styles = {
         cursor: "pointer",
         width: "620px",
         textTransform: "none",
+        boxShadow: "15px 10px 20px #00000026" 
     }
 };
 

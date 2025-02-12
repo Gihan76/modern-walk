@@ -9,7 +9,7 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         borderRadius: "12px",
-        boxShadow: 3
+        boxShadow: "15px 10px 20px #00000026"
     },
     cardMedia: {
         objectFit: "contain",
@@ -19,7 +19,7 @@ const styles = {
     },
     title: {
         textAlign: "center",
-        fontWeight: "bold"
+        fontWeight: 700
     },
     titleBox: {
         p: 2,
@@ -41,11 +41,12 @@ const styles = {
     price: {
         color: "#0E42FD",
         mb: 1,
-        fontWeight: "bold"
+        fontWeight: 700
     },
     description: {
         flexGrow: 1,
-        color: "#0E0E0E"
+        color: "#0E0E0E",
+        fontWeight: 400
     }
 };
 

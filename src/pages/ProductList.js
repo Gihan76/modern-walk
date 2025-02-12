@@ -8,7 +8,7 @@ import { MENS_CLOTHING_ROOT, WOMENS_CLOTHING_ROOT } from '../navigation/Routes';
 
 const styles = {
     category: {
-        fontWeight: 'bold',
+        fontWeight: 700,
         marginBottom: '25px',
         marginTop: '25px',
         marginLeft: '100px'

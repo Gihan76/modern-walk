@@ -11,11 +11,11 @@ const styles = {
         borderBottom: "4px #D9D9D9 solid"
     },
     linkTitle: {
-        fontWeight: 'bold',
+        fontWeight: 700,
         marginTop: '10px',
         marginBottom: '10px',
         textDecoration: 'none',
-        color: 'black',
+        color: '#0E0E0E',
         fontSize: '30px',
         width: "auto"
     }

@@ -8,10 +8,11 @@ import { CategoryButton } from '../components/CategoryButton';
 
 const styles = {
     flashSale: {
-        fontWeight: 'bold',
+        fontWeight: 700,
         marginBottom: '25px',
         marginTop: '25px',
-        marginLeft: '100px'
+        marginLeft: '100px',
+        color: "#0E0E0E"
     },
     grid: {
         margin: "0 0 20px 0",
@@ -25,7 +26,7 @@ export const LandingPage = () => {
     const categoryTiles = [
         {
             name: MENS_CLOTHING,
-            color: "#2DD4BF",
+            color: "#2BD9AF",
             route: MENS_CLOTHING_ROOT
         },
         {
